@@ -82,4 +82,19 @@ PUT /api/appointments/:id -> Edição e remarcação de horários (Protegido por
 
 DELETE /api/appointments/:id -> Cancelamento definitivo de agendamentos (Protegido por JWT).
 
+---
+
+## 🧪 🧪 Atividade 3: Testes, Qualidade e CI/CD (Garantia de Qualidade)
+
+Nesta etapa final, o MedSync recebeu uma infraestrutura completa de testes automatizados e integração contínua para garantir a estabilidade das regras de negócio e da interface.
+
+### 🕹️ 1. Como Rodar os Testes Automatizados
+
+Certifique-se de ter instalado as dependências de desenvolvimento (`npm install`).
+
+* **Modo Interativo (Interface Visual do Cypress):**
+  Para abrir o painel do Cypress e acompanhar os testes rodando no navegador em tempo real, execute:
+  ```bash
+  npm run test
+
 Projeto desenvolvido por Jaciana Regina da Silva como parte integrante das atividades práticas de engenharia e extensão universitária.
