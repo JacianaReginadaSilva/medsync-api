@@ -84,7 +84,14 @@ DELETE /api/appointments/:id -> Cancelamento definitivo de agendamentos (Protegi
 
 ---
 
+Markdown
+---
+
 ## 🧪 🧪 Atividade 3: Testes, Qualidade e CI/CD (Garantia de Qualidade)
+
+---
+
+## 🧪 Atividade 3: Testes, Qualidade e CI/CD (Garantia de Qualidade)
 
 Nesta etapa final, o MedSync recebeu uma infraestrutura completa de testes automatizados e integração contínua para garantir a estabilidade das regras de negócio e da interface.
 
@@ -96,5 +103,34 @@ Certifique-se de ter instalado as dependências de desenvolvimento (`npm install
   Para abrir o painel do Cypress e acompanhar os testes rodando no navegador em tempo real, execute:
   ```bash
   npm run test
+
+Modo Headless (Execução rápida via Terminal):
+Para rodar todos os testes lógicos e de componentes direto no terminal, execute:
+
+Bash
+npm run test:ci
+
+📊 2. Como Visualizar a Cobertura de Código (Coverage)
+A cobertura de código foi configurada utilizando o módulo @cypress/code-coverage.
+
+Após rodar os testes com o comando npm run test:ci, uma pasta chamada /coverage será gerada automaticamente na raiz do seu projeto.
+
+Para visualizar o relatório gráfico detalhado, basta abrir o arquivo coverage/lcov-report/index.html em qualquer navegador.
+
+Métrica alcançada: O projeto garante cobertura lógica superior a 80% das ramificações do fluxo de agendamentos.
+
+🚀 3. Como Funciona o Pipeline de CI/CD
+O projeto conta com automação nativa via GitHub Actions configurada no arquivo .github/workflows/ci.yml.
+
+Toda vez que um novo código for enviado para o repositório (git push ou Pull Request), o GitHub iniciará automaticamente um container Linux em nuvem que realiza os seguintes passos:
+
+Provisionamento: Inicializa um banco de dados PostgreSQL isolado e testa sua conectividade.
+
+Ambiente: Instala a versão correta do Node.js e restaura o cache de dependências.
+
+Instalação: Executa o comando npm install de forma limpa.
+
+Validação de QA: Executa de forma automatizada toda a suíte de testes (Back-end e Front-end), bloqueando o deploy caso algum teste falhe ou a cobertura fique abaixo da meta.
+
 
 Projeto desenvolvido por Jaciana Regina da Silva como parte integrante das atividades práticas de engenharia e extensão universitária.
