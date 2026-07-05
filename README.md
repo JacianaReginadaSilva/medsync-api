@@ -84,13 +84,6 @@ DELETE /api/appointments/:id -> Cancelamento definitivo de agendamentos (Protegi
 
 ---
 
-Markdown
----
-
-## 🧪 🧪 Atividade 3: Testes, Qualidade e CI/CD (Garantia de Qualidade)
-
----
-
 ## 🧪 Atividade 3: Testes, Qualidade e CI/CD (Garantia de Qualidade)
 
 Nesta etapa final, o MedSync recebeu uma infraestrutura completa de testes automatizados e integração contínua para garantir a estabilidade das regras de negócio e da interface.
@@ -132,5 +125,14 @@ Instalação: Executa o comando npm install de forma limpa.
 
 Validação de QA: Executa de forma automatizada toda a suíte de testes (Back-end e Front-end), bloqueando o deploy caso algum teste falhe ou a cobertura fique abaixo da meta.
 
+---
+
+## 📖 Atividade 4: Documentação e Contrato da API (Swagger/OpenAPI)
+
+Nesta etapa final de consolidação, o projeto recebeu a especificação formal de seus contratos de integração.
+
+### 🗺️ Como Acessar a Documentação da API
+Com o servidor rodando localmente (`npm start`), o contrato técnico interativo da API contendo a descrição de todos os endpoints, parâmetros aceitos e formatos de respostas JSON pode ser consumido diretamente na rota pública:
+* **URL Local:** `http://localhost:3000/api-docs`
 
 Projeto desenvolvido por Jaciana Regina da Silva como parte integrante das atividades práticas de engenharia e extensão universitária.
